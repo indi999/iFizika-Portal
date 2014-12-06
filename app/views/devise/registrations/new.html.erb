@@ -1,0 +1,35 @@
+
+<h1 class="subheader">Novi Korisnik</h1>
+
+<!-- Dve slike -->
+<ul class="small-block-grid-2">
+  <li>
+    <blockquote>
+
+
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <div>
+              <h8 class="subheader">Unesi sliku velične 225x225px</h8>
+              <%= f.file_field :avatar %>
+            </div>
+            <%= f.input :email, :required => true, :autofocus => true %>
+            <%= f.input :password, :required => true %>
+            <%= f.input :password_confirmation, :required => true %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Unesi podatke" %>
+
+          </div>
+          <cite>Unesi svoje podatke za registraciju na portal. </cite>
+    </blockquote>
+
+  <% end %>
+
+  </li>
+  <li><%= image_tag("/image/ljudi.png" ) %></li>
+</ul>
+
+

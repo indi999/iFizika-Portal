@@ -1,0 +1,41 @@
+ 
+<% if user_signed_in? %>
+
+<%= simple_form_for(@kontakt) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <h5><a><%= link_to current_user.email %></a></h5>
+
+        <%= f.input :ime %>
+        <%= f.input :prezime %>
+        <%= f.input :email %>
+        <%= f.input :poruka, as: :text %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Pošalji poruku" %>
+  </div>
+
+<% end %>
+
+<% else %>
+
+      <%= simple_form_for(@kontakt) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+
+          <%= f.input :ime, as: :text %>
+          <%= f.input :prezime %>
+          <%= f.input :email %>
+          <%= f.input :poruka, as: :text %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Pošalji poruku ", class:"button success" %>
+        </div>
+      <% end %>
+
+
+<% end %>

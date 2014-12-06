@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<% if user_signed_in? %>
+
+    <h1 class="subheader">Kontakt</h1>
+
+    <!-- Dve slike -->
+    <ul class="small-block-grid-2">
+      <li>
+        <blockquote>
+          <%= render 'form' %><cite>Da li imaš bilo koji problem ili želis da postaviš pitanje? Unesi svoje podatke u slobodna prazna iznad. </cite>
+        </blockquote>
+      </li>
+      <li><%= image_tag("/image/telephone.png" ) %></li>
+    </ul>
+
+    <hr/>
+    <!-- Tri slike -->
+    <ul class="small-block-grid-3">
+      <li><div class="panel">
+        <h5>VSTSS Cacak.</h5>
+        <p><a href="http://www.visokaskolacacak.edu.rs/index.php" >
+          <%= image_tag("/image/lOGOVTSS.png") %>
+        </a></p>
+      </div>
+      </li>
+      <li><div class="panel">
+        <h4 class="subheader">Društvo fizičara Srbije</h4>
+        <p><a href="http://www.dfs.rs" >
+          <img src="http://www.dfs.rs/images/dfs-logo.jpg" />
+        </a></p>
+      </div>
+      </li>
+      <li><div class="panel">
+
+        <p><a href="http://www.cpn.rs" >
+          <img src="http://www.cpn.rs/wp-content/themes/CPN/logos/logo11.png" />
+        </a></p>
+      </div>
+      </li>
+    </ul>
+<hr/>
+<ul class="small-block-grid-1">
+      <li><div class="panel">
+
+       <h1 class="subheader">Korisni linkovi</h1>
+        <a href="#" class="button" data-dropdown="drop">Link Dropdown &raquo;</a>
+        <ul id="drop" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
+          <li><a href="http://fizikazaosnovce678.wordpress.com/">Fizika za Osnovce</a></li>
+          <li><a href="http://oskaradjordje.wordpress.com/2010/12/17/14/">Fizika za VI, VII i VIII razred</a></li>
+          <li><a href="http://takmicenja.dfs.rs/?page_id=370">Takmicenja iz fizike</a></li>
+        </ul>
+      </div>
+    </li>
+</ul>
+    <%= link_to 'Nazad', products_pocetna_path, class:"button " %>
+<% else %>
+
+
+
+<h1 class="subheader">Kontakt</h1>
+
+<!-- Dve slike -->
+<ul class="small-block-grid-2">
+  <li>
+    <blockquote>
+      <%= render 'form' %><cite>Da li imaš bilo koji problem ili želis da postaviš pitanje? Unesi svoje podatke u prazna polja iznad. </cite>
+    </blockquote>
+  </li>
+  <li><%= image_tag("/image/telephone.png" ) %></li>
+</ul>
+
+
+
+<%= link_to 'Nazad', new_user_registration_path, class: "button" %>
+
+<% end %>
+
+
+

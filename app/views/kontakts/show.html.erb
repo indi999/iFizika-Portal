@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+
+    <% if current_user.admin? %>
+
+     <p id="notice"><%= notice %></p>
+
+        <!-- Dve slike -->
+
+        <ul class="small-block-grid-1">
+          <li><div class="panel">
+            <h5>Poslato od korisnika: <%= @kontakt.ime %> </h5>
+            <p><strong>Poruka:  </strong>
+              <%= @kontakt.poruka %></p>
+          </div>
+          </li>
+         </ul>
+
+        <p>
+           <strong>Email:</strong>
+           <%= @kontakt.email %>
+        </p>
+
+
+
+         <%= link_to 'Nazad', kontakts_path %>
+
+      <% else %>
+        <h1 class="subheader">Nedozvoljen pristup</h1>
+
+     <% end %>
+
+
+
+
+  <% else %>
+    <h1 class="subheader">Vaša poruka je poslata</h1>
+    <%= link_to 'Vrati se na pocetnu stranu', new_user_session_path %>
+<% end %>

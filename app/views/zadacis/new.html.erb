@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<% if current_user.admin? %>
+
+    <h1 class="subheader">Novi zadatak</h1>
+
+    <!-- Dve slike -->
+    <ul class="small-block-grid-2">
+      <li>
+        <blockquote>
+          <%= render 'form' %><cite> </cite>
+        </blockquote>
+      </li>
+      <li><%= image_tag("/image/cikicaok.png" ) %></li>
+    </ul>
+
+
+
+<%= link_to 'Nazad', zadacis_path %>
+
+<% end %>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<%= simple_form_for @product do |f| %>
+    <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+            <% @product.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end%>
+
+    <%= f.input :nivo_takmicenja, priority: [ "Skolsko" ],
+                                collection: [ "Skolsko", "Opstinsko",
+                                              "Okruzno", "Regionalno",
+                                              "Republicko", "Savezno" ],
+                                    prompt:   "Unesi nivo takmicenja" %>
+
+    <%= f.input :razred, :collection => 6..8, prompt: "Unesi za koji razred " %>
+
+    <%= f.input :godina, as: :date, start_year: Date.today.year - 23,
+                end_year: Date.today.year - 0, discard_day: true, discard_month: true,
+                order: [:year], prompt: "Unesi godinu testa" %>
+
+<!-- File Upload -->
+    <h6 class="subheader">Unesi Test (.pdf)</h6>
+    <%= f.file_field :testovi %>
+    <h6 class="subheader">Unesi resenje testa (.pdf)</h6>
+    <%= f.file_field :resenje %>
+<!--  kraj upload   -->
+
+    <%= f.input :id_zadatka %>
+    <%= f.input :opis, as: :text %>
+    <%= f.button :submit, "Unesi" %>
+<% end %>
+</body>
+
+</html>
+
+
+

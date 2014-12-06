@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+  	<%= stylesheet_link_tag "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag :defaults %> <!-- DODATO DEVISE -->
+    <%= csrf_meta_tags %>
+  </head>
+<body>
+<!-- Header -->
+<%= image_tag("/image/header.png" , :class => "bevel" , :size => "1980x140" ) %>
+
+<!-- Top Bar -->
+<div class="contain to grid  ">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+           <% if user_signed_in? %>
+        <h1><a><%= link_to current_user.email %></a></h1>
+           <% else %>
+              <%= link_to "Obavezno prijavljivanje na portal", new_user_registration_path %>
+           <% end %>
+         </li>
+        <li class="toggle-topbar menu-icon"><a href="http://localhost:3000">Menu</a></li>
+       </ul>
+
+     <!-- Right Nav Section -->
+     <section class="top-bar-section">
+        <ul class="right">
+      <% if user_signed_in? %>
+
+      <li class="divider"></li>
+      <li><%= link_to "Početna", products_pocetna_path %></li>
+
+      <li class="divider"></li>
+         <li class="has-dropdown"><a href="#">O Fizici</a>
+           <ul class="dropdown">
+              <li><a><%= link_to "Poznati Naucnici", site_naucnici_path %></a></li>
+              <li><a><%= link_to "Zabavna fizika", site_zabava_path %></a></li>
+           </ul>
+          </li>
+      <li class="divider"></li>
+        <li class="has-dropdown"><a href="#">Takmičenja</a>
+          <ul class="dropdown">
+            <li><a><%= link_to "Zadaci sa Takmičenja", products_path %></a></li>
+            <li><a><%= link_to "Pripremni Zadaci", zadacis_path %></a></li>
+
+          </ul>
+        </li>
+      <li class="divider"></li>
+      <li><%= link_to "Kontakt", new_kontakt_path %></li>
+
+   <!-- Right padajuci ADMIN -->
+       <% if current_user.admin? %>
+          <li class="divider"></li>
+           <li class="has-dropdown"><a href="#">Administratorski Meni</a>
+            <ul class="dropdown">
+              <li><%= link_to "Novi Test", new_product_path %></li>
+              <li><%= link_to "Novi Pripremni Zadatak", new_zadaci_path %></li>
+              <li><%= link_to "Registrovani korisnici", users_path %></li>
+              <li><%= link_to "Poruke korisnika", kontakts_path %></li>
+              <li><%= link_to 'Izmena podataka u profilu', edit_user_registration_path %></li>
+              <li><%= link_to "Pomoć", site_index_path %></li>
+              <li><%= link_to "Odjavi se", destroy_user_session_path, :method => :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+              <!-- Registrovani korisnik -->
+             <li class="divider"></li>
+              <li class="has-dropdown"><a href="#">Upravljanje Profilom</a>
+                <ul class="dropdown">
+                  <li><%= link_to 'Izmeni podatke u profilu', edit_user_registration_path %></li>
+                  <li><%= link_to "Pomoć", site_index_path %></li>
+                  <li><%= link_to "Odjavi se", destroy_user_session_path, :method => :delete %></li>
+                </ul>
+              </li>
+
+       <% end %>
+               </ul>   <!-- zavrsetak ul menija -->
+    <% else %>
+          <li class="divider"></li>
+          <li><%= link_to "Prijavi se", new_user_session_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Novi korisnik", new_user_registration_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Kontakt", new_kontakt_path %></li>
+          <li><%= link_to "Pomoć", site_index_path %></li>
+<% end %>
+</section>
+</nav>
+</div>
+<hr/>
+<div class="row">
+  <div class="large-12 columns">
+    <%= yield %>
+  </div>
+</div>
+
+<!-- Korisnik -->
+<hr/>
+
+<!--Social Icons-->
+
+<div class="footer">
+  <div class="social"><a href="https://www.facebook.com">&#62220;</a></div>
+  <div class="social"><a href="https://twitter.com">&#62217;</a></div>
+  <div class="social"><a href="https://accounts.google.com/ServiceLogin?service=oz&passive=1209600&continue=https://plus.google.com/?fd%3D1%26gpsrc%3Dgplp0">&#62223;</a></div>
+  <div class="social"><a href="https://www.linkedin.com/">&#62232;</a></div>
+  <div class="social"><a href="https://www.facebook.com/"></a>&#62235;</div>
+  <div class="social"><a href="https://www.facebook.com/"></a>&#62226;</div>
+  <div class="social"><a href="https://www.facebook.com/"></a>&#62214;</div>
+</div>
+
+<hr/>
+<nav class="breadcrumbs">
+<% if user_signed_in? %>
+
+      <%= link_to "Odjavi se", destroy_user_session_path, :method => :delete %>
+      <%= link_to "Kontakt", new_kontakt_path %>
+      <%= link_to "Pomoć", site_index_path %>
+
+<% else %>
+
+       <%= link_to "Prijavi se", new_user_session_path %>
+       <%= link_to "Novi Korisnik", new_user_registration_path %>
+       <%= link_to "Kontakt", new_kontakt_path %>
+       <%= link_to "Pomoć", site_index_path %>
+
+<% end %>
+</nav>
+
+    <%= image_tag("/image/Hederdown.png",:class => "bevel" , :size => "1980x300") %>
+    <%= javascript_include_tag "application" %>
+</body>
+
+
+

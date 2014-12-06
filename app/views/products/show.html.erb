@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<h1 class="subheader"> Prikaz </h1>
+<ul class="small-block-grid-2">
+<li>
+
+<p>
+    <strong>Test :</strong>
+     <!-- <%= @product.testovi_url %> -->
+     <!-- <%= image_tag(@product.testovi_url, :width => 300) if @product.testovi.present? %> -->
+     <%= image_tag("/image/PDF_button.png") %>
+     <%= link_to 'Preuzmi TEST', @product.testovi_url %>
+     </a>
+</p>
+<p>
+  <strong>Resenje Testa :</strong>
+  <!-- <%= image_tag(@product.resenje_url, :width => 300) if @product.resenje.present? %> -->
+  <%= image_tag("/image/PDF_button.png") %>
+  <%= link_to 'Preuzmi Resenje', @product.resenje_url %>
+</p>
+<p>
+  <strong>Nivo takmicenja :</strong>
+  <%= @product.nivo_takmicenja %>
+</p>
+<p>
+  <strong>Razred :</strong>
+  <%= @product.razred %>
+</p>
+
+<p>
+  <strong>Godina :</strong>
+  <%= @product.godina %>
+</p>
+
+</p>
+
+<p>
+  <strong>ID :</strong>
+  <%= @product.id_zadatka %>
+</p>
+<p>
+  <strong>Opis :</strong>
+  <%= @product.opis %>
+</p>
+<p>
+
+<% if current_user.admin? %>
+  <%= link_to 'Izmeni' , edit_product_path(@product) %>
+<% end %>
+
+<%= link_to 'Nazad', products_path %>
+</li>
+<li><%= image_tag("/image/cikicaok.png" ) %></li>
+</ul>
+
+
+
+
+

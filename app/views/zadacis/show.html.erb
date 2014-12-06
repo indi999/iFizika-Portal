@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<h1 class="subheader"> Prikaz </h1>
+<ul class="small-block-grid-2">
+<li>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Razred:</strong>
+  <%= @zadaci.razred %>
+</p>
+
+<p>
+  <strong>Oblast:</strong>
+  <%= @zadaci.oblast %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @zadaci.opis %>
+</p>
+
+<p>
+  <strong>Zadatak:</strong>
+  <!--<%= image_tag(@zadaci.zadatak_url, :width => 300) if @zadaci.zadatak.present? %>-->
+  <%= image_tag("/image/PDF_button.png") %>
+  <%= link_to 'Preuzmi ZADATAK', @zadaci.zadatak_url %>
+</p>
+
+<% if current_user.admin? %>
+<%= link_to 'Izmeni', edit_zadaci_path(@zadaci) %>
+<% end %>
+
+<%= link_to 'Nazad', zadacis_path %>
+  </li>
+  <li><%= image_tag("/image/cikicaok.png" ) %></li>
+</ul>

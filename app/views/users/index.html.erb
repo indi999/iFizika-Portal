@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<% if current_user.admin? %>
+
+ <h1 class="subheader">Registrovani korisnici</h1>
+ <%= image_tag("/image/kids-in-line1.png" ) %>
+
+<hr/>
+<ul class="small-block-grid-2">
+  <li><div class="panel">
+    <!-- listing korisnika -->
+    <!-- tabela -->
+    <table>
+      <thead>
+      <tr>
+        <th>Korisnici</th>
+        <th>Admin</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.admin %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  </li>
+
+  <li><div class="panel">
+    <h5>Ovo su registrovani korisnici</h5>
+    <p>Pored koresnickog emaila "True" oznacava Administratora sajta i on moze pristupiti bilo kom deliu sajta
+      ,dok "False" predstavnjlja registrovanog gosta sajta koji nema pravo da unosi sadrzaj na sajt .</p>
+  </div>
+  </li>
+</ul>
+
+<% else %>
+    <h1 class="subheader">Nedozvoljen pristup</h1>
+<% end %>
+</html>
+

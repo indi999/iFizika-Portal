@@ -1,0 +1,43 @@
+<% if current_user.admin? %>
+    <h1 class="subheader">Primljene poruke</h1>
+    <h5><p>Danas je : <%= @time %></P></h5>
+<table>
+  <thead>
+    <tr>
+      <th>Registrovani korisnik</th>
+
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Email</th>
+      <th>Poruka poslata</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kontakts.each do |kontakt| %>
+      <tr>
+        <td><%= kontakt.a_email %></td>
+
+        <td><%= kontakt.ime %></td>
+        <td><%= kontakt.prezime %></td>
+        <td><%= kontakt.email %></td>
+
+        <td><%= kontakt.created_at %></td>
+
+
+
+        <td><%= link_to 'Prikazi', kontakt %></td>
+        <td><%= link_to 'Obrisi', kontakt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+
+
+  </tbody>
+</table>
+
+<br>
+
+<% end %>

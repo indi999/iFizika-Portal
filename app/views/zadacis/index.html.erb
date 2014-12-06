@@ -1,0 +1,64 @@
+<h2 class="subheader">Pripremni zadaci iz fizike</h2>
+<hr/>
+
+<div class="row">
+  <div class="small-4 columns">
+    <div class="panel">
+    <!-- Pretraga -->
+      <h5>Unesi Traženi Razred</h5>
+           <blockquote>
+            <%= form_tag zadacis_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :search, params[:search]  %>
+                <%= submit_tag "Pretraga", class:"button radius", :razred => nil %>
+              </p>
+             <% end %>
+             </blockquote>
+    </div>
+  </div>
+  <div class="small-8 columns">
+    <%= foundation_paginate @zadacis %>
+    <!--Tabelarni prikaz-->
+      <table>
+        <thead>
+        <tr>
+          <th>Razred</th>
+          <th>Oblast</th>
+          <th>Opis</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <% @zadacis.each do |zadaci| %>
+            <tr>
+              <td><%= zadaci.razred %></td>
+              <td><%= zadaci.oblast %></td>
+              <td><%= zadaci.opis %></td>
+
+              <% if current_user.admin? %>
+
+                  <td><%= link_to 'Prikazi', zadaci %></td>
+                  <td><%= link_to 'Izmeni', edit_zadaci_path(zadaci) %></td>
+                  <td><%= link_to 'Obrisi', zadaci, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+             </tr>
+              <% else %>
+                  <td><%= link_to 'Prikazi', zadaci %></td>
+             </tr>
+              <% end %>
+          <% end %>
+        </tbody>
+      </table>
+   </div>
+<%= foundation_paginate @zadacis %>
+</div>
+<hr/>
+
+
+
+
+
+

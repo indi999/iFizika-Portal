@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ime: MyString
+  prezime: MyString
+  email: MyString
+  poruka: MyString
+
+two:
+  ime: MyString
+  prezime: MyString
+  email: MyString
+  poruka: MyString

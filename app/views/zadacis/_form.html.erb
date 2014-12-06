@@ -1,0 +1,22 @@
+
+<%= simple_form_for(@zadaci) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :razred, :collection => 6..8, prompt: "Unesi za koji razred " %>
+    <%= f.input :oblast, priority: [ "Skolsko" ],
+                collection: [ "Skolsko", "Opstinsko",
+                              "Okruzno", "Regionalno",
+                              "Republicko", "Olimpijada" ],
+                      prompt: "Unesi nivo takmicenja"  %>
+
+    <%= f.input :opis %>
+    <h6 class="subheader">Unesi Zadatak(.pdf)</h6>
+    <%= f.file_field :zadatak %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Unesi" %>
+  </div>
+<% end %>

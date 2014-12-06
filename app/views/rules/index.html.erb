@@ -1,0 +1,17 @@
+<H1>    Pretraga     simple_form</H1>
+
+<!--
+<%= # simple_form_for :search,  url: rules_path , :method => :get do |f| %>
+    <%= #f.input :query, :autofocus => true %>
+    <%= # f.submit "Search" %>
+<% # end %>
+
+-->
+
+
+<%= simple_form_for @products, :url => find_map_path, :html => { :class => 'form-inline' } do |f| %>
+
+    <%= f.input :address, :label => false, :placeholder => "Address" %>
+    <%= f.submit "Find!", :class => 'btn' %>
+
+<% end %>

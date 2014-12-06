@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<h1 class="subheader">Testovi sa takmičenja</h1>
+<hr/>
+
+
+<!-- Pretraga -->
+<ul class="large-4 columns">
+  <div class="panel">
+  <td><%= link_to 'Prikazi sve Testove', products_path, class:"expand radius button success" %></td>
+  </div>
+  <div class="panel">
+    <hr/>
+    <%= image_tag("/image/profa1.png" , :class => "bevel" , :size => "600x1500" ) %>
+    <blockquote>
+      <cite>Unesi trazeni NIVO TAKMICENJA ili RAZRED</cite>
+        <%= form_tag products_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search]  %>
+          <%= submit_tag "Pretraga", class:"button radius success", :nivo_takmicenja => nil, :razred => nil %>
+        <% end %>
+    </blockquote>
+    <hr/>
+</div>
+
+  <div class="panel">
+    <h4 class="subheader">Kalendar takmicenja iz fizike</h4>
+    <p>
+      <a href="http://takmicenja.dfs.rs/?page_id=121&lng=lat" >
+        <img src="http://takmicenja.dfs.rs/wp-content/uploads/2012/02/Takmicenja-JPEG-3.jpg" />
+      </a></p>
+  </div>
+
+</ul>
+<%= foundation_paginate @products %>
+<div class="large-8 columns">
+ <!-- tabela -->
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">Testovi</th>
+      </tr>
+
+      <tr>
+        <th>Nivo Takmicenja</th>
+        <th>Razred</th>
+        <th>Godina</th>
+        <th>Opis</th>
+        <th>Id</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+          <% @products.each do |product| %>
+         <tr>
+            <td><%= product.nivo_takmicenja %></td>
+            <td><%= product.razred %></td>
+            <td><%= product.godina %></td>
+            <td><%= product.opis %></td>
+            <td><%= product.id_zadatka %></td>
+
+            <% if current_user.admin? %>
+                <td><%= link_to 'Prikaz', product %></td>
+                <td><%= link_to 'Izmeni', edit_product_path(product) %></td>
+                <td><%= link_to 'Obrisi', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% else %>
+               <td><%= link_to 'Prikaz', product %></td>
+            <% end %>
+           </tr>
+         <% end %>
+    </tbody>
+  </table>
+ <br>
+<%= foundation_paginate @products %>
+</div>
+
+<hr/>
+<!-- Linkovana reklama -->
+<!-- Tri slike -->
+<ul class="small-block-grid-3">
+  <li><div class="panel">
+    <h5>VSTSS Cacak.</h5>
+    <p><a href="http://www.visokaskolacacak.edu.rs/index.php" >
+      <%= image_tag("/image/lOGOVTSS.png") %>
+    </a></p>
+  </div>
+  </li>
+  <li><div class="panel">
+    <p><a href="http://www.cpn.rs" >
+      <img src="http://www.cpn.rs/wp-content/themes/CPN/logos/logo11.png" />
+    </a></p>
+  </div>
+  </li>
+  <li><div class="panel">
+    <h4 class="subheader">Društvo fizičara Srbije</h4>
+    <p><a href="http://www.dfs.rs" >
+      <img src="http://www.dfs.rs/images/dfs-logo.jpg" />
+    </a></p>
+  </div>
+  </li>
+</ul>

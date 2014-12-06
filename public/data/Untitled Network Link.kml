@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<NetworkLink>
+	<name>Untitled Network Link</name>
+	<Url>
+		<viewRefreshMode>onRegion</viewRefreshMode>
+	</Url>
+</NetworkLink>
+</kml>
