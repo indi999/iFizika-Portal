@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql'
+gem 'mysql2'
 gem 'rake','10.1.1'
 
 # DODATNI FRAMEWORK #################### ##################################################

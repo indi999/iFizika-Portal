@@ -5,11 +5,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <h5><a><%= link_to current_user.email %></a></h5>
-
-        <%= f.input :ime %>
+    <h5><a><%= current_user.email %></a></h5>
+        <%  xxx = current_user.email %>
+    <%= f.input :ime,label: 'Ime' %>
         <%= f.input :prezime %>
-        <%= f.input :email %>
+        <%= f.input :email, placeholder: 'user@domain.com' %>
+        <%= f.input :a_email, placeholder: current_user.email %>
+    
         <%= f.input :poruka, as: :text %>
   </div>
 

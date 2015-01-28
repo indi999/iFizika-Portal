@@ -65,8 +65,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
-    mysql (2.9.1)
-    mysql (2.9.1-x86-mingw32)
+    mysql2 (0.3.17)
     orm_adapter (0.5.0)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
@@ -154,7 +153,7 @@ DEPENDENCIES
   foundation-will_paginate
   jbuilder (~> 1.2)
   jquery-rails
-  mysql
+  mysql2
   rails (= 4.0.0)
   rails_12factor
   rake (= 10.1.1)
