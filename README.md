@@ -4,6 +4,8 @@
 Projekat je ralizovan preko IDE online okruzenja Nitrous.io
 Adresa sajta:http://fizikaportalradni-143521.euw1.nitrousbox.com/users/sign_in
 
+CLAUD9 link na kojoj je aplikacija:https://fizikaportal-indi9-2.c9.io/
+
  Specijalisticki Rad " Ruby on Rails “ 
 
     Portal “ Fizika “ je namenjem mladim ljubiteljima fizike osnvnih škola.
