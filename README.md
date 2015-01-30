@@ -32,20 +32,33 @@ Things you may want to cover:
 
 
 gem 'thin'
+
 gem 'turbolinks'
+
 gem 'simple_form'
+
 gem 'carrierwave'
+
 gem 'devise', '~> 3.0.0.rc'
+
 gem 'cancan'
+
 gem 'role_model'
+
 gem 'rails_12factor', group: :production
+
 gem 'ransack'
+
 gem 'will_paginate', '3.0.4'
+
 gem 'foundation-will_paginate'
 
   gem 'sass-rails', '~> 4.0.0'
+  
   gem 'coffee-rails', '~> 4.0.0'
+  
   gem 'uglifier', '>= 1.3.0'
+  
   gem 'zurb-foundation'
  
 
