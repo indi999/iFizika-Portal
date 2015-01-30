@@ -30,8 +30,7 @@ Things you may want to cover:
 * Database 
      MySQL
 
-# DODATNI FRAMEWORK #################### ##################################################
-# Server
+
 gem 'thin'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks - Dodato
 gem 'turbolinks'
