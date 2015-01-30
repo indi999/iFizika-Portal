@@ -30,7 +30,7 @@ Things you may want to cover:
 * Database 
      MySQL
 
-
+Framework -- GEM
 gem 'thin'
 
 gem 'turbolinks'
