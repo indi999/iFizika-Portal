@@ -31,6 +31,7 @@ Things you may want to cover:
      MySQL
 
 Framework -- GEM
+
 gem 'thin'
 
 gem 'turbolinks'
