@@ -2,9 +2,9 @@
 
 
 Projekat je ralizovan preko IDE online okruzenja Nitrous.io
-Adresa sajta:http://fizikaportalradni-143521.euw1.nitrousbox.com/users/sign_in
+Adresa sajta:http://138.68.137.29:3001
 
-CLAUD9 link na kojoj je aplikacija:https://fizikaportal-indi9-2.c9.io/
+DigitalOcean Server
 
  Specijalisticki Rad " Ruby on Rails “ 
 
@@ -22,17 +22,18 @@ CLAUD9 link na kojoj je aplikacija:https://fizikaportal-indi9-2.c9.io/
 Things you may want to cover:
 
 * Ruby version
-    Ruby 1.9.3 --  Rails 4.0.0
+    Ruby 2.5.0  
+    Rails 5.2.1
     
 * System 
-    Ubintu 
+    DigitalOcean Server Ubuntu 18 
        
 * Database 
      MySQL
 
 Framework -- GEM
 
-gem 'thin'
+gem 'puma'
 
 gem 'turbolinks'
 
@@ -40,7 +41,7 @@ gem 'simple_form'
 
 gem 'carrierwave'
 
-gem 'devise', '~> 3.0.0.rc'
+gem 'devise'
 
 gem 'cancan'
 
@@ -50,15 +51,15 @@ gem 'rails_12factor', group: :production
 
 gem 'ransack'
 
-gem 'will_paginate', '3.0.4'
+gem 'will_paginate'
 
 gem 'foundation-will_paginate'
 
-  gem 'sass-rails', '~> 4.0.0'
+  gem 'sass-rails'
   
-  gem 'coffee-rails', '~> 4.0.0'
+  gem 'coffee-rails'
   
-  gem 'uglifier', '>= 1.3.0'
+  gem 'uglifier'
   
   gem 'zurb-foundation'
  

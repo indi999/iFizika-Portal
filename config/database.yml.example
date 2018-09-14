@@ -11,11 +11,11 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: FizikaPortal_dev
+  database: 
   pool: 5
-  username: root
+  username: 
   password: 
-  host: localhost
+  host: 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,17 +23,17 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: FizikaPortal_test
+  database: 
   pool: 5
-  username: root
+  username: 
   password: 
-  host: localhost
+  host: 
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: FizikaPortal
+  database: 
   pool: 5
-  username: root
+  username: 
   password: 
-  host: localhost
+  host: 
