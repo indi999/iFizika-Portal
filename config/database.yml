@@ -11,10 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: FizikaPortal_Radni
+  database: FizikaPortal_dev
   pool: 5
   username: root
-  password:
+  password: Mg7p84cs
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -23,17 +23,17 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: FizikaPortal_Radni_test
+  database: FizikaPortal_test
   pool: 5
   username: root
-  password:
+  password: Mg7p84cs
   host: localhost
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: FizikaPortal_Radni_production
+  database: FizikaPortal
   pool: 5
   username: root
-  password:
+  password: Mg7p84cs
   host: localhost

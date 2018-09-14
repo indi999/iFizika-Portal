@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
-
+gem 'rails', '5.2.1'
+gem 'puma', '~> 3.6.2'
 # Use mysql as the database for Active Record
 gem 'mysql2'
-gem 'rake','10.1.1'
+# gem 'rake','12.3.1'
 
 # DODATNI FRAMEWORK #################### ##################################################
 
@@ -18,7 +18,7 @@ gem 'simple_form'
 # Use carrierwave for uploading pdf in ruby-dodato
 gem 'carrierwave'
 # User autentifiticaon-Dodato
-gem 'devise', '~> 3.0.0.rc'
+gem 'devise'
 # User Privilegie
 gem 'cancan'
 # User role_model uz cancan-Dodatak
@@ -28,14 +28,14 @@ gem 'rails_12factor', group: :production
 # Pretrega
 gem 'ransack'
 # Pagination
-gem 'will_paginate', '3.0.4'
+gem 'will_paginate'
 gem 'foundation-will_paginate'
 ###########################################################################################
 
   # Use SCSS for stylesheets
-  gem 'sass-rails', '~> 4.0.0'
+  gem 'sass-rails'
   # Use CoffeeScript for .javascript.coffee assets and views
-  gem 'coffee-rails', '~> 4.0.0'
+  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -52,7 +52,7 @@ gem 'foundation-will_paginate'
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
 
@@ -62,8 +62,8 @@ gem 'sdoc', require: false
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
-
+# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'actionpack'
 # Use unicorn as the app server
 # gem 'unicorn'
 

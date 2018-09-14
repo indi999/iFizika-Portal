@@ -1,4 +1,4 @@
-class CreateKontakts < ActiveRecord::Migration
+class CreateKontakts < ActiveRecord::Migration[5.1]
   def change
     create_table :kontakts do |t|
       t.string :naslov
