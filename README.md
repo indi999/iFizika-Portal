@@ -1,5 +1,3 @@
-== README
-
 Specijalisticki Rad " Ruby on Rails “ 
 
     Portal “ Fizika “ je namenjem mladim ljubiteljima fizike osnvnih škola.
@@ -28,21 +26,21 @@ https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
      MySQL
 
 GEMS:
-    gem 'puma'
-    gem 'turbolinks'
-    gem 'simple_form'
-    gem 'carrierwave'
-    gem 'devise'
-    gem 'cancan'
-    gem 'role_model'
-    gem 'rails_12factor', group: :production
-    gem 'ransack'
-    gem 'will_paginate'
-    gem 'foundation-will_paginate'
-    gem 'sass-rails'
-    gem 'coffee-rails' 
-    gem 'uglifier'
-    gem 'zurb-foundation'
+    gem 'puma',
+    gem 'turbolinks',
+    gem 'simple_form',
+    gem 'carrierwave',
+    gem 'devise',
+    gem 'cancan',
+    gem 'role_model',
+    gem 'rails_12factor', group: :production,
+    gem 'ransack',
+    gem 'will_paginate',
+    gem 'foundation-will_paginate',
+    gem 'sass-rails',
+    gem 'coffee-rails',
+    gem 'uglifier',
+    gem 'zurb-foundation'.
  
 
 
