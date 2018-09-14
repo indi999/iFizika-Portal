@@ -17,7 +17,7 @@ class Product < ActiveRecord::Base
   #pretrega
   def self.search(search)
     if search
-      find(:all, :conditions => ['nivo_takmicenja LIKE ? OR razred LIKE ? ', "%#{search}%", "%#{search}%" ])
+      where('nivo_takmicenja LIKE ? OR razred LIKE ? ', "%#{search}%", "%#{search}%" )
      else
       all()
     end
