@@ -4,8 +4,7 @@ class Zadaci < ActiveRecord::Base
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['razred LIKE ?', "%#{search}%"])
-
+      where('razred LIKE ?', "%#{search}%")
     else
       all()
     end
