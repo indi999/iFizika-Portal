@@ -18,7 +18,7 @@ class Product < ActiveRecord::Base
     if search
       find(:all, :conditions => ['nivo_takmicenja LIKE ? OR razred LIKE ? ', "%#{search}%", "%#{search}%" ])
      else
-      find(:all)
+      all()
     end
   end
 end

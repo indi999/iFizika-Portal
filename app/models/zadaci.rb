@@ -7,7 +7,7 @@ class Zadaci < ActiveRecord::Base
       find(:all, :conditions => ['razred LIKE ?', "%#{search}%"])
 
     else
-      find(:all)
+      all()
     end
   end
 end
