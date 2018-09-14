@@ -14,7 +14,7 @@ development:
   database: FizikaPortal_dev
   pool: 5
   username: root
-  password: Mg7p84cs
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -26,7 +26,7 @@ test:
   database: FizikaPortal_test
   pool: 5
   username: root
-  password: Mg7p84cs
+  password: 
   host: localhost
 
 production:
@@ -35,5 +35,5 @@ production:
   database: FizikaPortal
   pool: 5
   username: root
-  password: Mg7p84cs
+  password: 
   host: localhost

@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products =Product.paginate(:page => params[:page], :per_page => 10).search(params[:search])
+    @products = Product.paginate(:page => params[:page], :per_page => 10).search(params[:search])
    # @products = Product.search(params[:search])
    # @products = Product.all
   end

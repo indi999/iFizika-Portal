@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
   # ensure that a user_id is present
   mount_uploader :testovi, TestoviUploader
   mount_uploader :resenje, ResenjaUploader
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_product
@@ -13,12 +14,12 @@ class Product < ActiveRecord::Base
       redirect_to root_url
     end
   end
-#pretrega
+  #pretrega
   def self.search(search)
     if search
       find(:all, :conditions => ['nivo_takmicenja LIKE ? OR razred LIKE ? ', "%#{search}%", "%#{search}%" ])
      else
-      find(:all)
+      all()
     end
   end
 end

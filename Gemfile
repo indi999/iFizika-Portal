@@ -5,6 +5,7 @@ gem 'rails', '5.2.1'
 gem 'puma', '~> 3.6.2'
 # Use mysql as the database for Active Record
 gem 'mysql2'
+gem 'tzinfo-data'
 # gem 'rake','12.3.1'
 
 # DODATNI FRAMEWORK #################### ##################################################
