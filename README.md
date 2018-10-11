@@ -1,6 +1,6 @@
 # Specijalisticki Rad " Ruby on Rails “ 
 
-# Portal “ Fizika “ je namenjem mladim ljubiteljima fizike osnvnih škola.
+# Portal “ Fizika “ je namenjem mladim ljubiteljima fizike u osnovnim škola.
 Na ovom portalu možete pristupiti testovima sa takmičenja iz fizike održanim na svim nivoima
 i razredima. Svi testovi su postavljeni i dostupni za preuzimanje sa rešenjima. Takođe je moguće
 besplatno preuzeti pripremne zadatke iz fizike za VI, VII i VIII razred osnovnih škola. Dostupna je
