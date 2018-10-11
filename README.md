@@ -26,7 +26,7 @@ https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
 * Database: 
      development, test: MySQL;
      production: PostgreSQL
-GEMS:
+* GEMS:
     gem 'puma',
     gem 'turbolinks',
     gem 'simple_form',
