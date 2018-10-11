@@ -23,8 +23,8 @@ https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
 * System 
     DigitalOcean Server Ubuntu 18        
 * Database 
-     MySQL
-
+     development, test: MySQL
+     production: PostgreSQL
 GEMS:
     gem 'puma',
     gem 'turbolinks',
