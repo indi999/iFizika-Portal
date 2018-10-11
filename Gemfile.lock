@@ -43,10 +43,14 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    autoprefixer-rails (9.1.4)
+      execjs
     bcrypt (3.1.12)
     bcrypt (3.1.12-x64-mingw32)
     bcrypt (3.1.12-x86-mingw32)
+    bindex (0.5.0)
     builder (3.2.3)
+    byebug (10.0.2)
     cancan (1.6.10)
     carrierwave (1.2.3)
       activemodel (>= 4.0.0)
@@ -111,6 +115,9 @@ GEM
     nokogiri (1.8.4-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+    pg (1.1.3)
+    pg (1.1.3-x64-mingw32)
+    pg (1.1.3-x86-mingw32)
     puma (3.6.2)
     rack (2.0.5)
     rack-test (1.1.0)
@@ -133,11 +140,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (5.2.1)
       actionpack (= 5.2.1)
       activesupport (= 5.2.1)
@@ -195,6 +197,11 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
+    web-console (3.7.0)
+      actionview (>= 5.0)
+      activemodel (>= 5.0)
+      bindex (>= 0.4.0)
+      railties (>= 5.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -209,6 +216,8 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack
+  autoprefixer-rails
+  byebug
   cancan
   carrierwave
   coffee-rails
@@ -217,9 +226,9 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mysql2
+  pg (>= 0.18, < 2.0)
   puma (~> 3.6.2)
   rails (= 5.2.1)
-  rails_12factor
   ransack
   role_model
   sass-rails
@@ -228,8 +237,9 @@ DEPENDENCIES
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)
+  web-console (>= 3.3.0)
   will_paginate
   zurb-foundation
 
 BUNDLED WITH
-   1.16.2
+   1.16.5

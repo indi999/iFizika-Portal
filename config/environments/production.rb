@@ -1,5 +1,12 @@
 FizikaPortal::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { :host => '138.68.137.29:3001' }
+
+  # config.serve_static_assets = true
+  # config.serve_static_files = true
+  config.public_file_server.enabled = true
+  # config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -21,8 +28,7 @@ FizikaPortal::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
  
-  #config.serve_static_assets = true
-  config.serve_static_files = true
+
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
