@@ -14,7 +14,8 @@ Na sledecem linku mozete pogledati powerPoint prezentacijiu Specijalistickog rad
 https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
 
 , dok realizovani projekat koji se nalazi na DigitalOcean serveru moze se pogledati na sledecem linku:
- http://138.68.137.29:3001
+ * DigitalOcean: http://138.68.137.29:3001
+ * Heroku Server: https://fast-garden-40375.herokuapp.com/products/pocetna
 
 
 * Ruby version:
