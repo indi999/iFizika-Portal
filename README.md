@@ -24,7 +24,7 @@ https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
     Heroku,
     DigitalOcean Server Ubuntu 18        
 * Database: 
-     development, test: MySQL
+     development, test: MySQL;
      production: PostgreSQL
 GEMS:
     gem 'puma',
