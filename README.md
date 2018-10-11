@@ -11,9 +11,7 @@ Portal “ Fizika “nastao je kao Specijalsticki rad studenta Visoke Škole Teh
 Ceo portal je rađen u Ruby on Rails-u i Zurb Foundation framework-a
     
 Na sledecem linku mozete pogledati powerPoint prezentacijiu Specijalistickog rada:
-https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
-
-, dok realizovani projekat koji se nalazi na DigitalOcean serveru moze se pogledati na sledecem linku:
+https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf, realizovani projekat je smesteni na DigitalOcean i Heroku serveru.
  * DigitalOcean: http://138.68.137.29:3001
  * Heroku Server: https://fast-garden-40375.herokuapp.com
 
