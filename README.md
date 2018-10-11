@@ -20,7 +20,8 @@ https://docuri.com/download/ruby-on-rails_59a8db16f581719e12af23c0_pdf
 * Ruby version
     Ruby 2.5.0  
     Rails 5.2.1   
-* System 
+* Server System 
+    Heroku
     DigitalOcean Server Ubuntu 18        
 * Database 
      development, test: MySQL
